@@ -1,0 +1,115 @@
+* {
+    font-family: 'Lucida Sans', sans-serif;
+    text-align: center;
+    -webkit-print-color-adjust:exact !important;
+    print-color-adjust:exact !important;
+}
+
+p {
+    font-size: clamp(2.2rem, 2.5vw, 5rem);
+}
+
+input {
+    font-size: clamp(1.7rem, 2.2vw, 4.5rem);
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    background-color: #11009E;
+    color: #E6B9DE;
+}
+
+#invitationForm {
+    background-color: #11009E;
+    list-style-position: inside;
+}
+
+#inviteHeader {
+    font-size: clamp(3.5rem, 4.7vw, 8rem);
+}
+
+button {
+    font-size: clamp(2rem, 2.5vw, 5rem);
+    border: none;
+    appearance: none;
+    outline: none;
+    background-color: #4942E4;
+    color: #FAE7F3;
+
+    border-radius: clamp(0.5rem, 1.4vw, 2.0rem);
+    padding: 0.6rem 0.6rem;
+    cursor: pointer;
+
+    background-image: linear-gradient(to right, #4942E4 50%, #E6B9DE 50%);
+    background-size: 200%;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-position: right;
+    color: #11009E;
+}
+
+input {
+    border: none;
+    appearance: none;
+    background-color: #4942E4;
+    color: #FAE7F3;
+    width: clamp(15rem, 23vw, 30rem);
+    padding: 0.15rem;
+    border-radius: clamp(0.5rem, 1.4vw, 2.0rem);
+}
+
+input:focus::placeholder{
+    color: transparent;
+}
+
+input::placeholder {
+    color: #FAE7F3;
+    opacity: 0.8; 
+    transition: color 0.3s ease;
+}
+
+input[type='date']{
+    color: #FAE7F3;
+    opacity: 0.8; 
+}
+
+a {
+    color: #E6B9DE;
+    font-weight: bold;
+}
+
+#listOfRequests{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    column-gap: 0.8rem;
+    flex-wrap: wrap;
+    height: 50vw;
+    margin-left: -1.5625rem;
+}
+
+@media (max-width: 1200px) {
+    #listOfRequests {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+}
+
+#displayList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    column-gap: 0.8rem;
+    flex-wrap: wrap;
+    height: auto;
+    font-size: clamp(2.2rem, 2.5vw, 5rem);
+}
+
+

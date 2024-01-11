@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Birthday Invite</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+
+
+</head>
+
+<body>
+
+    <header>
+        <h1 id="inviteHeader">Create your very own birthday invite!</h1>
+    </header>
+
+    <div id="BirthdayInput">
+
+        <div id="resetButtonDiv">
+         
+            <button type="button" onclick="resetForm()">Reset</button>
+           
+        </div>
+
+        <form id="invitationForm">
+
+            <div id="initialForm">
+
+                <p>
+                    Come to <input type="text" id="birthdayPerson" name="birthdayPerson" placeholder="Name" autocomplete="off">'s birthday party.
+                    They are turning <input type="text" id="age" name="age" placeholder="Upcoming Age" autocomplete="off"> years old on
+                    <input type="date" id="birthDate" name="birthDate" required>.
+                    The birthday party is being held at
+                    <input type="text" id="address" name="address" placeholder="Address" autocomplete="off">.
+                </p>
+    
+                
+                <button id = 'initialFormButton' type="button" onclick="showSpecialRequestField()">Submit</button>
+                
+
+            </div>
+
+            <div id="specialRequestsHidden" class="hidden">
+                <p>
+                    How many special requests are needed? <input type="text" id="requestNumber" name="requestNumber" placeholder="Number of Requests" autocomplete="off">
+                </p>
+
+             
+                <button type="button" onclick="createRequests()">Submit</button>
+                
+            </div>
+
+            <div id="listOfRequestsDiv" class="hidden">
+
+                <ul id="listOfRequests"></ul>
+
+               
+                <button id="buttonForRequestStorage" class="hidden" type="button" onclick="storeRequests()">Submit</button>
+               
+
+            </div>       
+
+            <div id="specialMessageHidden" class="hidden">
+                <p>
+                    Does the birthday person have a special message? <input type="text" id="specialMessage" name="specialMessage" placeholder="Special Message" autocomplete="off">
+                </p>
+
+               
+                <button type="button" onclick="storeMessage()">Create Birthday Invite!</button>
+               
+
+            </div>
+
+            <div id="birthdayTemplateDiv" class="hidden">
+                <p id="birthdayTemplate"></p>
+                <p>Here are some special requests from the birthday person: </p>
+                <ul id="displayList"></ul>
+                <p id="displaySpecialMessage"></p>
+    
+        </form>
+
+        <div id="createPDFDiv" class="hidden">
+            
+            <button type="button" onclick="turnInviteIntoPDF()">Print!</button>
+            
+        </div>
+        
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
